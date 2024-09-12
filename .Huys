@@ -1,0 +1,60 @@
+for i,v in next, workspace:GetDescendants() do
+    pcall(function()
+        v.Transparency = 1
+    end)
+end
+for i,v in next, getnilinstances() do
+    pcall(function()
+        v.Transparency = 1
+        for i1,v1 in next, v:GetDescendants() do
+            v1.Transparency = 1
+        end
+    end)
+end
+a = workspace
+a.DescendantAdded:Connect(function(v)
+    pcall(function()
+        v.Transparency = 1
+    end)
+end)
+wait(.3)
+Script = "Fluxus"
+script_key = "wms5uMmxIdd"
+_G.Script = "W-AzurePremiumTrueV2"
+getgenv().SetFpsCap = false
+getgenv().FpsCap = 10
+getgenv().OneClickUi = true -- Only Open Necessacry Ui For One Click
+getgenv().FpsBoost1 = false
+getgenv().FixCrash = false -- Turn it On For Hopping Server, Improve Performance But Silent Aim On Mob And Player
+getgenv().FixCrash2 = false -- Turn it On For Hopping Server, Improve Performance But Will Remove Speed Changer
+    getgenv().WhiteScreen = false
+    getgenv().UiCheckItems = true
+    getgenv().OneClickSetting = {
+        Enable=true,
+        UnlimitGetQuest=true,
+        TripleQuest=true,
+        AutoAddStats=true,
+        RedeemCode=true,
+        Sea2KeyHop=true,
+        FruitEat = { --Priority, Name, 
+            [1] = {},
+            [2] = {}
+        },
+        EatFruitFromStorage = false,
+        SnipeFruit = false,
+        SnipeFruitMirage = false,
+        HopIfFoundNearExploiter = false,
+        HopHakiColor =false,
+        HopTushita = true,
+        HopValkyriehelm = true,
+        HopMirrorFractal=true,
+        FarmPole = false, -- Turn off If Want Focus Level
+        FarmItems = false, --Turn off If Want Focus Level And CDK, THis Only get After You Get God Human
+        DisableSoulGuitar = false,
+        DisableCDK = false,
+        DisableRaceEvolve = false,
+       MinFragment = 30000, --Farm After Max Level
+    }
+getgenv().Team = "Pirates"
+getgenv().AutoLoad = false --Will Load Script On Server Hop
+loadstring(game:HttpGet("https://raw.githubusercontent.com/bestluxca/Scripts/main/All%20Scripts"))()
